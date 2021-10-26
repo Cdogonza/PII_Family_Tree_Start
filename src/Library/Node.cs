@@ -1,38 +1,32 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System;
 
 namespace Library
 {
-    public class Node
+    //Esta clase es el nodo family donde se agregan los hijos y acepta visitors
+    public class Node : INode
     {
-        private int number;
+        public  List<Node> children = new List<Node>();
 
-        private List<Node> children = new List<Node>();
-
-        public int Number {
-            get
-            {
-                return this.number;
-            }
-        }
-
-        public ReadOnlyCollection<Node> Children { 
-            get
-            {
-                return this.children.AsReadOnly();
-            }
-        }
-
-        public Node(int number)
+        public string Name{get;set;}
+        public int Age{get;set;}
+        public Node(Person persona)
         {
-            this.number = number;
+            this.Name = persona.Name;
+            this.Age = persona.Age;
         }
 
-        public void AddChildren(Node n)
-        {
-            this.children.Add(n);
-        }
+
         
+        public void AddChildren(Node person)
+        {
+            children.Add(person);
+        }
+
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
     }
 }
