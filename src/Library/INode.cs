@@ -2,8 +2,8 @@
 
 namespace Library
 {
-  //Esta interface fue creada para garantizar lo que debe tener cada nodo family, en caso de crear otra family debera implementar
-  //los metodos de aceptar visitor y agregar children a su nodo
+// PUEDO CREAR OTRO TIPO DE NODO PERO AL HEREDAD ESTA INTERFACE SI O SI TIENE QUE TENER LOS METODOS ABAJO DETALLADOS PARA 
+//QUE FUNCIONE COMO UN NODO ESPERADO
     public interface INode
     {
       void Accept(IVisitor visitor);

@@ -4,11 +4,10 @@ using System;
 
 namespace Library
 {
-    //Esta clase es el nodo family donde se agregan los hijos y acepta visitors
+    //ESTA CLASE TIENE POR FUNCION ALMACENAR AL NODO Y SUS HIJOS, ASI COMO ACEPTAR VISITORS
     public class Node : INode
     {
         public  List<Node> children = new List<Node>();
-
         public string Name{get;set;}
         public int Age{get;set;}
         public Node(Person persona)
@@ -16,9 +15,7 @@ namespace Library
             this.Name = persona.Name;
             this.Age = persona.Age;
         }
-
-
-        
+  
         public void AddChildren(Node person)
         {
             children.Add(person);

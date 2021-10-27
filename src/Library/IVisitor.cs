@@ -4,11 +4,10 @@ using System;
 
 namespace Library
 {
-    //Al crear un visitor debe de implementar el metodo visit a cualquier nodo creado, para eso es esta interface,
-    //obligar a que las clases visitor contengan el metodo Visit para visitar un nodo family
+    //AL CREAR UN VISITOS NUEVO, DEBE HEREDAR ESTA INTERFACE PARA OBLGARLO A TENER METODO Visit PARA VISITAR UN NODO
     public interface IVisitor
     {
-        void Visit(INode element);
+        void Visit(Node element);
     }
 
 }

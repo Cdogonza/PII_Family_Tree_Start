@@ -4,7 +4,7 @@ using System;
 
 namespace Library
 {
-    //Esta clase contiene los tipos que se afregan a family
+    //ESTA CLASE CONTIENE LOS TIPO PERSON QUE VANA RECIBIR LOS NODOS
     public class Person 
     {
         public string Name{get;set;}
